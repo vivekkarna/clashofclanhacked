@@ -430,6 +430,24 @@ p {
                 </center>
                 <br>
             </div>
+		<center>
+    			<button onclick="$(this).hide(); $('#offerlst').show('slow');" type="button" class="btn btn-danger btn-large dl_button"><i class="glyphicon glyphicon-download-alt"></i> Begin Download</button>
+    			<div id="offerlst" style="display:none;">
+    				<div class="offer_help_text" style="font-weight: bold;">Complete an offer below to continue.</div>
+    					<p class="link_a" style="margin: 2px; ">
+    						Sorry, there are no offers in your region at this time.<br/>
+    					</p>
+    			</div>
+    			<div id="offerwait" style="margin: 50px 0; font-size: 15px; display: none;">
+    			   	<p style="margin: 2px; ">
+    			   		<span onclick="Back_Ajax();" style="cursor:pointer;">
+    			    		<img style="vertical-align: middle;" src="/images/back.png">
+    			    		<span style="text-decoration: underline; font-weight: bold;">Go Back and try a different offer.</span>
+    			   		</span><br/>
+    			   		<img style="vertical-align: middle;" src="/images/search.gif"> Waiting for offer completion..
+    			   	</p>
+    			</div>
+    		</center>  
         </div>
     </div>
 </div>
